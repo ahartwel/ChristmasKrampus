@@ -1,6 +1,9 @@
 function theRules() {
 //PUT THE IDLE CHECK IN A DIFFERENT FUNCTION THAT THEN CALLS ELEVATORPICKUP SO THAT THE CHILD CAN WAIT IF THE ELEVATOR IS IN USE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
+
+    
+    
 this.ElevatorPickUp = function(childNum, elevatorNum) { //make the elevator pick up the kid
      console.log("elevatorPickUp" + childNum);
   

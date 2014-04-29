@@ -1,6 +1,40 @@
 //PUT THE IDLE CHECK IN A DIFFERENT FUNCTION THAT THEN CALLS ELEVATORPICKUP SO THAT THE CHILD CAN WAIT IF THE ELEVATOR IS IN USE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
    var elevatorOne = false;
        var elevatorTwo = false;
+
+
+function callCartleft(childNum) {
+    if (cartInUse==false) {
+     cartInUse=true;
+        var cart= document.getElementById("cart");
+        whoInCart=childNum;
+        TweenMax.to(cart,2, {left: 147, onComplete:Floor2One, onCompleteParams:[childNum]});
+       
+    } else {
+              setTimeout(function() {
+          callCartleft(childNum);  
+        },2000);       
+                    }
+    
+}
+
+
+function callCartRight(childNum) {
+    if (cartInUse==false) {
+     cartInUse=true;
+        var cart= document.getElementById("cart");
+        whoInCart=childNum;
+        TweenMax.to(cart,2, {left: 412, onComplete:Floor2One, onCompleteParams:[childNum,1, true]});
+       
+       
+    } else {
+              setTimeout(function() {
+          callCartRight(childNum);  
+        },2000);       
+                    }
+    
+}
+
 function callElevator(childNum, elevatorNum) { //make the elevator pick up the kid
      console.log("elevatorPickUp" + childNum);
        
@@ -124,7 +158,7 @@ function startWalking(childNum,elevatorNum) { //send the kid out on the right pa
          break;
  
     case 2:
-         Floor2One(childNum,0);
+         callCartleft(childNum);
         break;
     case 3:
          Floor3One(childNum,0);

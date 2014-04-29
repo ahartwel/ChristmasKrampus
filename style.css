@@ -570,3 +570,12 @@ left: 750;
 top: 1085;
     
 }
+
+
+/* cart */
+#cart {
+ position: absolute;
+top: 913px;
+left:143px;
+z-index:200;
+}

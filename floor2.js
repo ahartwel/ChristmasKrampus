@@ -2,6 +2,7 @@ function Floor2One(childNum, playPosition, reverse) { //floor one animation one
     var floorY = floor[child[childNum].floor].y;
     var ElevatorElem = elevator[1].elem;
     console.log("Floor2One" + childNum);
+     
   flipChildForward(childNum);
     console.log(childNum);
     child[childNum].floor=2;
@@ -44,6 +45,10 @@ console.log("CallElevatorFloor" + childNum);
        
                    
 function Floor2Two(childNum, reverse) {
+    if (childNum == whoInCart) {
+         
+            cartInUse=false;
+            }
     childWalking(childNum);
   console.log("Floor2Two" + childNum);
     child[childNum].tl = new TimelineMax({onComplete:randomPathFloor2, onCompleteParams:[2,childNum]});

@@ -3,7 +3,8 @@
         var elevator = new Array();
         elevator[1] = new Object();
         elevator[2] = new Object();
-    
+        var cartInUse = false;
+        var whoInCart = 0;
         var floor = new Array();
         floor[1] = new Object();
         floor[2] = new Object();

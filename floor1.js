@@ -78,12 +78,16 @@ function killIt(tl, whatFloor,childNum) {
     tl.pause();
     tl.kill();
  setTimeout(function() {
-    Floor2One(childNum,1,true);
+    //Floor2One(childNum,1,true);
+     callCartRight(childNum);
 },100);
             break;
     case 1:
     tl.pause();
     tl.kill();
+            if (childNum == whoInCart) {
+            cartInUse=false;
+            }
  setTimeout(function() {
     ElevatorPickUp(childNum,1);
     childWalking(childNum);
