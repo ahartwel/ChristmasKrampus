@@ -35,7 +35,7 @@ function Floor2One(childNum, playPosition, reverse) { //floor one animation one
     
 }
 
-                                            
+       //test                                     
 function callElevatorFloor(childNum) {
 childWalking(childNum);
  ElevatorPickUp(childNum,1);   
