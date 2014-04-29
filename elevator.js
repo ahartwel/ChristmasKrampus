@@ -18,8 +18,14 @@ function callCartleft(childNum) {
        
     } else {
               setTimeout(function() {
+                  var randomNum = Math.random();
+                  if (randomNum<.2) {
+                       ElevatorPickUp(childNum, 1);
+                  } else {
           callCartleft(childNum);  
-        },2000);       
+                  }
+        },2000); 
+             
                     }
     
 }
@@ -64,14 +70,23 @@ function ElevatorPickUp(childNum, elevatorNum) {
   if (elevatorOne==false) {  //check to see if elevator is being used
           
           elevatorOne=true; 
-            
+        
      callElevator(childNum, elevatorNum);   
         
       
       } else {
         setTimeout(function() {
-         
+          if (child[childNum].floor==2) {
+                 var randomNum = Math.random();
+                  if (randomNum<.8) {
+                       ElevatorPickUp(childNum, 1);
+                  } else {
+          callCartleft(childNum);  
+                  }
+                
+            } else {
          ElevatorPickUp(childNum, elevatorNum);
+            }
         },2000);
   }
   }

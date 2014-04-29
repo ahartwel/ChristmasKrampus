@@ -78,6 +78,7 @@ function setup() {
          child[childLength].state="cartIn";
          child[childLength].floor=2;
          child[childLength].elevatorNum=0;
+         child[childLength].cart=false;
          childLength++;
      });
     childLength--;
@@ -91,7 +92,7 @@ function setup() {
     
     
     floor[1].y=733;
-    floor[2].y=865;
+    floor[2].y=862;
     floor[3].y=1005;
     floor[4].y=1248;
     floor[5].y=1078;
