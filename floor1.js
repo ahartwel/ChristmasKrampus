@@ -87,6 +87,7 @@ function killIt(tl, whatFloor,childNum) {
     tl.kill();
             if (childNum == whoInCart) {
             cartInUse=false;
+                $("#cart").show();
             }
  setTimeout(function() {
     ElevatorPickUp(childNum,1);

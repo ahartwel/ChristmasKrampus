@@ -48,6 +48,7 @@ function Floor2Two(childNum, reverse) {
     if (childNum == whoInCart) {
          
             cartInUse=false;
+        $("#cart").show();
             }
     childWalking(childNum);
   console.log("Floor2Two" + childNum);

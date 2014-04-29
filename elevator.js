@@ -8,7 +8,13 @@ function callCartleft(childNum) {
      cartInUse=true;
         var cart= document.getElementById("cart");
         whoInCart=childNum;
-        TweenMax.to(cart,2, {left: 147, onComplete:Floor2One, onCompleteParams:[childNum]});
+        $("#cart").removeClass("right");
+        setTimeout(function() {
+            Floor2One(childNum);
+            $("#cart").hide();
+            $("#cart").addClass("right");
+        },2000);
+        //TweenMax.to(cart,2, {left: 147, onComplete:Floor2One, onCompleteParams:[childNum]});
        
     } else {
               setTimeout(function() {
@@ -24,7 +30,13 @@ function callCartRight(childNum) {
      cartInUse=true;
         var cart= document.getElementById("cart");
         whoInCart=childNum;
-        TweenMax.to(cart,2, {left: 412, onComplete:Floor2One, onCompleteParams:[childNum,1, true]});
+         $("#cart").addClass("right");
+        setTimeout(function() {
+            Floor2One(childNum,1,true);
+            $("#cart").hide();
+            $("#cart").removeClass("right");
+        },2000);
+        //TweenMax.to(cart,2, {left: 412, onComplete:Floor2One, onCompleteParams:[childNum,1, true]});
        
        
     } else {
